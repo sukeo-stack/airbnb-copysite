@@ -1,0 +1,723 @@
+
+$button_c: #FF5A5F;
+$main_c: #484848;
+$border_c: #EBEBEB;
+$comment_c: #FDB32B;
+
+
+// *****************************************************************************
+// 共通記述ここから▼
+// *****************************************************************************
+
+html {
+  font-size: 62.5%;
+  overflow: auto;
+}
+body {
+  font-size: 1.6em;
+  max-width: 1780px;
+  // width: 90%;
+  margin: 0 auto;
+  color: $main_c;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 4rem;
+  margin-bottom: 70px;
+  &:before {
+    content: "";
+    display: block;
+    width: 70px;
+    border-top: 2px solid gray;
+    height: 25px;
+  }
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+p {
+  line-height: 1.4;
+}
+
+a.anchor {
+  color: #57AEB1;
+  display: block;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// はじめるボタンの記述▼
+input.start {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.7rem;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  background-color: $button_c;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 0;
+}
+// ボタンここまで▲
+
+// ボタンの記述▼
+input {
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 48px;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 3px;
+  border: 2px solid $main_c;
+  background-color: #fff;
+  color: $main_c;
+  padding: 0 25px;
+  margin-bottom: 100px
+}
+
+// DLの記述▼
+dl {
+  margin-bottom: 85px;
+  dt {
+    margin-bottom: 20px;
+  }
+  dd {
+    margin-bottom: 60px;
+    p {
+    }
+  }
+}
+
+// " 写真直下のコメントの記述▼
+p.comment {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  &:before {
+    content: "“";
+    display: block;
+    color: $comment_c;
+    font-size: 6rem;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+p.comment_2 {
+  font-size: 1.4rem;
+  color: #767676;
+  margin-bottom: 10px;
+}
+
+// *****************************************************************************
+// スマホ向け記述▼
+// *****************************************************************************
+
+header {
+  padding-bottom: 25px;
+
+  nav#header_top {
+    display: none;
+  }
+  // nav {
+  //   // position: absolute;
+  //   width: 100%;
+  //   height: 0;
+  //   label {
+  //     position: absolute;
+  //     width: 15px;
+  //     height: 15px;
+  //     border-top: 2px solid transparent;
+  //     border-bottom: 4px solid #fff;
+  //     border-left: 2px solid transparent;
+  //     border-right: 4px solid #fff;
+  //     top: 30px;
+  //     left: 30px;
+  //     transform: rotate(45deg);
+  //     z-index: 1;
+  //   }
+
+// 飛び出すナビゲーションバーの記述▼
+    // input {
+    //   margin-bottom: 0;
+    //   // display: none;
+    // }
+    // ul#menue_list {
+    //   position: absolute;
+    //   z-index: 1;
+    //   overflow-y: hidden;
+    //   height: 0;
+    //   opacity: 0;
+    //   transition: all 0.5s;
+    // }
+    // .menue_ber:checked ~ #menue_list {
+    //   height: auto;
+    //   opacity: 1;
+    //   z-index: 1;
+    //
+    // }
+    //
+    // .menue_ber:checked ~ label {
+    //   position: absolute;
+    //   width: 15px;
+    //   height: 15px;
+    //   border-top: 4px solid #fff;
+    //   border-bottom: 4px solid transparent;
+    //   border-left: 4px solid #fff;
+    //   border-right: 4px solid transparent;
+    //   top: 30px;
+    //   left: 30px;
+    //   transform: rotate(45deg);
+    //   z-index: 1;
+    // }
+// 飛び出すナビゲーションバーの記述ここまで
+  // }
+  #header_box {
+    background-image: url(https://a0.muscache.com/4ea/air/v2/pictures/9d08d356-59b9-4ac4-9f41-5b9c13c2b211.jpg?t=r:w720-sfit,e:fwebp-c75);
+    background-size: cover;
+    width: 100vw;
+    height: 238px;
+    position: relative;
+    // left: 50%;
+    // transform: translateX(-50%);
+    h1 {
+      color: #fff;
+      padding: 0 50px 30px 30px;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  #header_content {
+    padding: 30px 0;
+    width: 90%;
+    margin: 0 auto;
+    p {
+      font-weight: bold;
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+    form#header_select {
+      display: flex;
+      flex-direction: column;
+      .select_content {
+        text-align: left;
+        border-radius: 3px;
+        margin: 5px 0;
+        padding: 5px 0 5px 5px;
+        height: 35px;
+        border: 1px solid $border_c;
+      }
+      input.select_content {
+        padding-left: 10px;
+        font-size: 1.6rem;
+      }
+      select {
+        font-size: 1.6rem;
+      }
+      p {
+        font-weight: bold;
+        font-size: 3rem;
+        margin-top: 25px;
+        margin-bottom: 18px;
+        span {
+          font-size: 1rem;
+          font-weight: normal;
+        }
+      }
+
+
+    }
+  }
+}
+
+#main_wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#hosthing_wrapper {
+  dl {
+    margin-bottom: 85px;
+    &:last-child {
+      margin-bottom: 20px;
+    }
+    dt {
+      &:before {
+        content: "✔";
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        display: block;
+      }
+    }
+    dd {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  a {
+    margin-bottom: 100px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+#relief_wrapper {
+  p {
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+  ul {
+    margin-top: 30px;
+    margin-bottom: 70px;
+    li {
+      line-height: 2.2;
+      letter-spacing: 1px;
+      &:before {
+        content: "✔";
+        color: #57AEB1;
+        display: inline-block;
+        padding-right: 15px;
+        font-size: 2rem;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 87vw;
+    margin-bottom: 90px;
+  }
+}
+
+#settlement_wrapper {
+  dl {
+    margin-bottom: 20px;
+    dd {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+
+#friend_wrapper {
+  dl {
+    dt {
+      h3 {
+        font-size: 4rem;
+        font-weight: 400;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;;
+      }
+    }
+  }
+}
+
+#about_wrapper {
+  margin-bottom: 100px;
+  dl {
+    margin-bottom: 15px;
+    dd {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+#quesution_wrapper {
+  h2 {
+    margin-bottom: 40px;
+  }
+  ul {
+    margin-bottom: 80px;
+    li {
+      line-height: 4.6;
+      border-bottom: 1px solid $border_c;
+    }
+  }
+}
+
+#detail_wrapper {
+  margin-bottom: 80px;
+  dl.detail_content {
+    a {
+
+    }
+    border: 1px solid $border_c;
+    box-shadow: 0 4px 3px -3px $border_c;
+    border-radius: 2px;
+    margin: 15px 0;
+    display: flex;
+    dt {
+      margin-bottom: 0;
+      img {
+        width: 76px;
+        height: 76px;
+        object-fit: cover;
+      }
+    }
+    dd {
+      margin-bottom: 0;
+      padding: 14px;
+      p {
+        font-size: 1.4rem;
+        font-weight: 800;
+        &:last-of-type {
+          margin-top: 10px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+#will_wrapperr {
+  padding: 60px 0 0 40px;
+  margin-bottom: 80px;
+  h2 {
+    width: 320px;
+    color: #fff;
+    margin-bottom: 40px;
+    &:before {
+      display: none;
+      content: "";
+    }
+  }
+  input {
+    border: none;
+  }
+  width: 100vw;
+  height: 375px;
+  background-image: url(../airbnb_images/dbe25d99-6821-4e02-802f-fcd7aaef85bc.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#sitemenue_wrapper {
+  display: none;
+}
+
+footer {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #767676;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  a {
+    color: #767676;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+
+// ************************************************************************
+// タブレット向けの記述▼
+// ************************************************************************
+@media screen and (min-width: 744px) {
+
+
+  #main_wrapper {
+    width: 650px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+    &:before {
+      margin: 0 auto;
+    }
+  }
+
+  header {
+    #header_box {
+      height: 312px;
+      h1 {
+        font-size: 4rem;
+        padding: 0 100px 30px 80px;
+      }
+    }
+    #header_content {
+      max-width: 695px;
+      margin: 0 auto;
+      padding: 20px 0;
+      form#header_select {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .select_content {
+          height: 48px;
+        }
+        input {
+          width: 100%;
+        }
+        select {
+          &:first-of-type {
+            width: 58%;
+          }
+          &:last-of-type {
+            width: 38%;
+          }
+        }
+      }
+    }
+  }
+
+  #hosthing_wrapper {
+    .hosthing_people {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 648px;
+      height: 324px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      a {
+        order: 4;
+        width: 50%;
+        margin-bottom: 0;
+        img {
+          width: 324px;
+          height: 324px;
+        }
+      }
+      p.comment {
+        width: 48%;
+        padding-right: 35px;
+        margin-top: 0;
+        &:before {
+          margin-top: 0;
+        }
+      }
+      p.comment_2 {
+        width: 48%;
+        padding-right: 35px;
+      }
+      input {
+        width: 38%;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #relief_wrapper {
+    img {
+      width: 648px;
+      height: 411px;
+    }
+  }
+
+  #settlement_wrapper {
+    .hosthing_people {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 648px;
+      height: 324px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      margin-top: 120px;
+      a {
+        width: 50%;
+        margin-bottom: 0;
+        img {
+          margin-top: 0;
+          width: 324px;
+          height: 324px;
+        }
+      }
+      p.comment {
+        width: 48%;
+        padding-left: 35px;
+        margin-top: 35px;
+        &:before {
+          margin-top: 0;
+        }
+      }
+      p.comment_2 {
+        width: 48%;
+        padding-left: 35px;
+      }
+      input {
+        width: 38%;
+        margin-left: 35px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #detail_wrapper {
+    #detail_inner {
+      display: flex;
+      justify-content: space-between;
+      dl.detail_content {
+        display: block;
+        dt {
+          img {
+            width: 203px;
+            height: 104px;
+          }
+        }
+      }
+    }
+  }
+
+  #sitemenue_wrapper {
+    width: 100vw;
+    max-width: 1250px;
+    position: relative;
+    left: 55%;
+    transform: translateX(-50%);
+    margin: 100px auto 30px auto;
+    display: block;
+    #sitemenue_inner {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $border_c;
+      dl.sitemenue {
+        width: 24%;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #767676;
+        dt {
+          color: #484848;
+        }
+        dd {
+          margin-bottom: 0;
+          ul {
+            li {
+              line-height: 1.4;
+              span {
+                font-size: 1.3rem;
+                border-radius: 5px;
+                color: #fff;
+                background-color: #006A70;
+                padding: 0px 5px;
+                margin-left: 10px;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ************************************************************************
+// PC向けの記述▼
+// ************************************************************************
+
+@media screen and (min-width: 1241px) {
+
+  #main_wrapper {
+    width: 1048px;
+    margin: 90px auto 0 auto;
+  }
+
+  header {
+    nav#header_top {
+      width: 100%;
+      height: 90px;
+      position: fixed;
+      z-index: 1;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+
+      ul#header_left {
+        flex-grow: 3;
+        display: flex;
+        margin-left: 30px;
+        height: 90px;
+        li {
+          color: $main_c;
+          font-weight: bold;
+          padding-left: 40px;
+          align-self: center;
+          &:first-of-type {
+            color: #1E9297;
+            border-bottom: 3px solid #1E9297;
+            padding-left: 0;
+            height: 53px;
+            align-self: flex-end;
+          }
+        }
+      }
+      ul#header_right {
+        flex-grow: 2;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 100px;
+        li {
+          color: $main_c;
+          font-weight: bold;
+          padding-left: 15px;
+          align-self: center;
+          &:first-of-type {
+            font-size: 1.5rem;
+            padding-top: 15px;
+            font-weight: normal;
+          }
+          &:nth-child(2) {
+            font-weight: bold;
+            font-size: 3rem;
+            margin-top: 25px;
+            margin-bottom: 18px;
+          }
+        }
+      }
+    }
+
+    #header_box {
+      top: 90px;
+      height: 700px;
+      margin-bottom: 60px;
+    }
+
+    #header_box h1, #header_content {
+      display: none;
+    }
+  }
+
+  #reason {
+    display: flex;
+    justify-content: space-between;
+    dl {
+      width: 444px;
+      dd {
+        p {
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+
+  #hosthing_wrapper {
+    #hosthing_inner {
+      display: flex;
+    }
+    dl {
+    }
+  }
+
+}
